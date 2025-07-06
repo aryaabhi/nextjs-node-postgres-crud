@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { Pool } from 'pg';
+import cors from 'cors';
+
 
 dotenv.config();
 
@@ -13,6 +15,7 @@ const pool = new Pool({
 });
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello from Node.js backend!');
