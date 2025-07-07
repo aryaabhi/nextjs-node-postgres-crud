@@ -25,7 +25,7 @@ services:
   frontend:
     build: .
     environment:
-      - NEXT_PUBLIC_API_URL=http://backend:4000
+      - NEXT_PUBLIC_API_URL=http://168.231.112.206:4000
     depends_on:
       - backend
     ports:
